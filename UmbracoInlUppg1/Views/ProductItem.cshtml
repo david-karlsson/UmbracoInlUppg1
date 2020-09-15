@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ProductItem>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = null;
+}
+
+
+
+		<link rel="stylesheet" href="/assets/css/main.css" />
+
+
+
+
+
+
+		<section id="one" class="wrapper style1">
+				<div class="inner">
+					<article class="feature left">
+						<span class="image"><img src="@Model.Value("productImage")" alt="" /></span>
+						<div class="content">
+							<h2>@Model.Value("productName")</h2>
+							<p>@Model.Value("productDescription")</p>
+							<ul class="actions">
+								<li>
+									<a href="#" class="button alt">Buy</a>
+								</li>
+							</ul>
+						</div>
+					</article>
+					
+				</div>
+			</section>

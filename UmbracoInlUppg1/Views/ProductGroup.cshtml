@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ProductGroup>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}    
+
+<link rel="stylesheet" href="/assets/css/main.css" />
+
+
+
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("51ced1ba-27af-4bb6-aee8-1781ab06b3ce"))
+    .ChildrenOfType("productItem")
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+<ul>
+    
+    
+
+
+
+		<section id="one" class="wrapper style1">
+				<div class="inner">
+					<article class="feature left">
+						<div class="content">
+						    <h2>@Model.Value("productPageTitle")</h2>
+
+							<h3>  
+                        	@foreach (var item in selection)
+                        	{
+                        		<li>
+                        			<a href="@item.Url">@item.Name</a>
+                        		</li>
+                        	}</h3>
+							<ul class="actions">
+								
+							</ul>
+						</div>
+					</article>
+    
+    
+    
+    
+    
+  
+</ul>
+
