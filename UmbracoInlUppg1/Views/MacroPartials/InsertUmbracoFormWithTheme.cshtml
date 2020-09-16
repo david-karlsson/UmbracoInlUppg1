@@ -46,5 +46,5 @@
     }
 
     
-    Html.RenderAction("RenderForm", "UmbracoForms", new {formId = form, recordId = recordGuid, theme = theme, includeScripts = includeScripts });
+    Html.RenderAction("RenderForm", "UmbracoForms", new {formId = form, recordId = recordGuid, theme = theme, includeScripts = includeScripts, mode= "form" });
 }

@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ad551323dfb2594f")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.6")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ef28fc6bb70903bd")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -48,11 +48,11 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// HomeConent
+		/// Home Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
-		[ImplementPropertyType("homeConent")]
-		public string HomeConent => this.Value<string>("homeConent");
+		[ImplementPropertyType("homeContent")]
+		public string HomeContent => this.Value<string>("homeContent");
 
 		///<summary>
 		/// HomeTitle
@@ -62,7 +62,7 @@ namespace Umbraco.Web.PublishedModels
 		public string HomeTitle => this.Value<string>("homeTitle");
 	}
 
-	/// <summary>Content</summary>
+	/// <summary>Content page</summary>
 	[PublishedModel("content")]
 	public partial class Content : Home
 	{
@@ -111,7 +111,7 @@ namespace Umbraco.Web.PublishedModels
 
 	/// <summary>Forms</summary>
 	[PublishedModel("forms")]
-	public partial class Forms : PublishedContentModel
+	public partial class Forms : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -128,11 +128,18 @@ namespace Umbraco.Web.PublishedModels
 #pragma warning restore 0109
 
 		// ctor
-		public Forms(IPublishedContent content)
+		public Forms(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Form1
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
+		[ImplementPropertyType("form1")]
+		public global::System.Web.IHtmlString Form1 => this.Value<global::System.Web.IHtmlString>("form1");
 	}
 
 	/// <summary>Product-Item</summary>
@@ -213,6 +220,46 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
 		[ImplementPropertyType("productPageTitle")]
 		public string ProductPageTitle => this.Value<string>("productPageTitle");
+	}
+
+	/// <summary>Contact page with form</summary>
+	[PublishedModel("contactPageWithForm")]
+	public partial class ContactPageWithForm : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
+		public new const string ModelTypeAlias = "contactPageWithForm";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContactPageWithForm, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public ContactPageWithForm(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// FormPicker1
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
+		[ImplementPropertyType("formPicker1")]
+		public object FormPicker1 => this.Value("formPicker1");
+
+		///<summary>
+		/// Umbraco Navi Hide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => this.Value<bool>("umbracoNaviHide");
 	}
 
 	/// <summary>Folder</summary>
