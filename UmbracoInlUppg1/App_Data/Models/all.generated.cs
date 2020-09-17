@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ef28fc6bb70903bd")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "7c7a260035a095cc")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.8")]
 
 
 // FILE: models.generated.cs
@@ -74,53 +74,6 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
 		[ImplementPropertyType("homeTitle")]
 		public string HomeTitle => this.Value<string>("homeTitle");
-	}
-
-	/// <summary>Content page</summary>
-	[PublishedModel("content")]
-	public partial class Content : Home
-	{
-		// helpers
-#pragma warning disable 0109 // new is redundant
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
-		public new const string ModelTypeAlias = "content";
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
-		public new static IPublishedContentType GetModelContentType()
-			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Content, TValue>> selector)
-			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-#pragma warning restore 0109
-
-		// ctor
-		public Content(IPublishedContent content)
-			: base(content)
-		{ }
-
-		// properties
-
-		///<summary>
-		/// Content Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
-		[ImplementPropertyType("contentText")]
-		public string ContentText => this.Value<string>("contentText");
-
-		///<summary>
-		/// Content Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
-		[ImplementPropertyType("contentTitle")]
-		public string ContentTitle => this.Value<string>("contentTitle");
-
-		///<summary>
-		/// Umbraco Navi Hide: Enable this to hide this page in the navigation
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
-		[ImplementPropertyType("umbracoNaviHide")]
-		public bool UmbracoNaviHide => this.Value<bool>("umbracoNaviHide");
 	}
 
 	/// <summary>Forms</summary>
@@ -236,7 +189,7 @@ namespace Umbraco.Web.PublishedModels
 		public string ProductPageTitle => this.Value<string>("productPageTitle");
 	}
 
-	/// <summary>Contact page with form</summary>
+	/// <summary>Contact page</summary>
 	[PublishedModel("contactPageWithForm")]
 	public partial class ContactPageWithForm : PublishedContentModel
 	{
@@ -260,6 +213,13 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// ContactTitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
+		[ImplementPropertyType("contactTitle")]
+		public string ContactTitle => this.Value<string>("contactTitle");
 
 		///<summary>
 		/// FormPicker1
