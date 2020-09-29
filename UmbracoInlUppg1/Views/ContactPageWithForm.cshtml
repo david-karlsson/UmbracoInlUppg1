@@ -11,12 +11,16 @@
 				<div class="inner">
 					<header class="major narrow">
 						<h2>@Model.Value("contactTitle")</h2>
-						<p>Ipsum dolor tempus commodo adipiscing</p>
+						
 					</header>
-				@Umbraco.RenderMacro("renderUmbracoForm", new {FormGuid="cc5c8bbd-3d49-4f11-b48d-b10cc343b090", FormTheme="", ExcludeScripts="1"})
-
-				
-				
+			@*Umbraco.RenderMacro("renderUmbracoForm", new {FormGuid="cc5c8bbd-3d49-4f11-b48d-b10cc343b090", FormTheme="", ExcludeScripts="1"})
+*@
+                    				
+                    		@{
+                    
+                     Html.RenderPartial("~/Views/Partials/ContactForm.cshtml", new UmbracoInlUppg1.Models.ContactFormViewModel());
+                    
+                     }
 				
 				
 				</div>

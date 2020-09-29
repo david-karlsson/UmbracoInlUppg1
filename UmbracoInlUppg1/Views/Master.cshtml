@@ -6,21 +6,6 @@
 }
 
 
-@{
-var site = Model.Root();
-var selection = Umbraco.ContentAtRoot().FirstOrDefault()
-    .Children()
-    .Where(x => x.IsVisible())
-    .OrderByDescending(x => x.CreateDate);
-}
-<ul>
-	@foreach (var item in selection)
-	{
-		<li>
-			<a href="@item.Url">@item.Name</a>
-		</li>
-	}
-</ul>
 <html>
 	<head>
 		<title>Retrospect by TEMPLATED</title>
@@ -30,12 +15,39 @@ var selection = Umbraco.ContentAtRoot().FirstOrDefault()
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		
+		
+		
 	</head>
+	
+	
+	
+	
+	
+	
+	
 	<body class="landing">
 
+@{
+var site = Model.Root();
+var selection = Umbraco.ContentAtRoot().FirstOrDefault()
+    .Children()
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+<ul>
+	@* @foreach (var item in selection)
+	{
+		<li>
+			<a href="@item.Url">@item.Name</a>
+		</li>
+	}
+*@
+	
+</ul>
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1><a href="index.html">Retrospect</a></h1>
+				<h1><a href="/">Retrospect</a></h1>
 				<a href="#nav">Menu</a>
 			</header>
 
@@ -52,7 +64,13 @@ var selection = Umbraco.ContentAtRoot().FirstOrDefault()
                                 <a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url()">@item.Name</a>
                             </li>
                         }
+                            <hr/>
+                            
+                            <h3>Language</h3>
+                           <li><a  href="/">English</a> </li> 
+                         <li>	<a href="/sv">Swedish</a></li> 
                     </ul>
+                   
 			</nav>
 @RenderBody()
 		<!-- Footer -->

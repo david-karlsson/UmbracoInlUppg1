@@ -25,11 +25,17 @@
                   "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
                   "dataSourceFieldKey": null,
                   "containsSensitiveData": false,
-                  "mandatory": true,
+                  "mandatory": false,
                   "regex": null,
                   "requiredErrorMessage": "Consent is required to store and process the data in this form.",
                   "invalidErrorMessage": null,
-                  "condition": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
                   "settings": {
                     "AcceptCopy": "Yes, I give permission to store and process my data"
                   },
@@ -72,7 +78,10 @@
                     "logicType": "All",
                     "rules": []
                   },
-                  "settings": {},
+                  "settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
                   "preValues": []
                 },
                 {
@@ -97,7 +106,10 @@
                     "logicType": "All",
                     "rules": []
                   },
-                  "settings": {},
+                  "settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
                   "preValues": []
                 },
                 {
@@ -122,7 +134,10 @@
                     "logicType": "All",
                     "rules": []
                   },
-                  "settings": {},
+                  "settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
                   "preValues": []
                 },
                 {
@@ -147,7 +162,11 @@
                     "logicType": "All",
                     "rules": []
                   },
-                  "settings": {},
+                  "settings": {
+                    "Theme": "",
+                    "Size": "",
+                    "ErrorMessage": ""
+                  },
                   "preValues": []
                 },
                 {
@@ -172,7 +191,10 @@
                     "logicType": "All",
                     "rules": []
                   },
-                  "settings": {},
+                  "settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
                   "preValues": []
                 }
               ]

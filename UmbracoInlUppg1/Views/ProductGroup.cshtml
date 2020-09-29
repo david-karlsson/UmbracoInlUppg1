@@ -24,23 +24,28 @@
 
 		<section id="one" class="wrapper style1">
 				<div class="inner">
-					<article class="feature left">
-						<div class="content">
+				
+						<div>
 						    <h2>@Model.Value("productPageTitle")</h2>
 
 							<h3>  
                         	@foreach (var item in selection)
                         	{
-                        		<li>
-                        			<a href="@item.Url">@item.Name</a>
+                        		<li class="feature left">
+                        			
+                        			
+                        			<img src="@item.Value("productImage")" alt="" />
+                        				<article >
+                        			<a href="@item.Url" class="content">@item.Name</a></article>
                         		</li>
+                        			
+    
                         	}</h3>
 							<ul class="actions">
 								
 							</ul>
 						</div>
-					</article>
-    
+				
     
     
     

@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+
+	<section id="four" class="wrapper style2 special">
+				<div class="inner">
+					<header class="major narrow">
+						<h2>@Model.Value("contactTitle")</h2>
+						
+					</header>
+				@Umbraco.RenderMacro("renderUmbracoForm", new {FormGuid="cc5c8bbd-3d49-4f11-b48d-b10cc343b090", FormTheme="", ExcludeScripts="1"})
+
+                    				</div>

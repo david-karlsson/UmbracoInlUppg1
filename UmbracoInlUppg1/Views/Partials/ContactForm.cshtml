@@ -1,0 +1,37 @@
+﻿@model UmbracoInlUppg1.Models.ContactFormViewModel
+
+
+@{
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+
+}
+@if (Convert.ToBoolean(TempData["IsSuccessful"]))
+{
+<h1>Success!</h1>
+                <p>Thanks for sending your message, we will get back to you shortly.</p> }
+                            else
+                            {
+                                using (Html.BeginUmbracoForm("HandleContactForm", "Contact"))
+                                {
+                @Html.ValidationSummary(true)
+                                    @Html.AntiForgeryToken()
+                                                        <div style="margin:auto;width:60%;padding:10px;">
+                                                            <div>
+                                                                @Html.LabelFor(m => m.Name)
+                                                                @Html.TextBoxFor(m => m.Name, new { placeholder = "Your Name" })
+                                                            </div>
+                                                            <br />
+                                                            <div>
+                                                                @Html.LabelFor(m => m.Email)
+                                                                @Html.TextBoxFor(m => m.Email, new { placeholder = "Email Address" })
+                                                            </div>
+                                                            <br />
+                                                            <div>
+                                                                @Html.LabelFor(m => m.Message)
+                                                                @Html.TextAreaFor(m => m.Message, new { placeholder = "Your Message" })
+                                                            </div>
+                                                            <br />
+                                                            <input type="submit" name="submit" value="Send" />
+                                                        </div>}
+                                                                    }

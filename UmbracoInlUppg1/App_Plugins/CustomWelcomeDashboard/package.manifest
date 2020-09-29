@@ -6,7 +6,7 @@
       "sections": [ "content" ],
       "weight": -10,
       "access": [
-        { "deny": "translator" },
+       
         { "grant": "admin" }
       ]
     }

@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ErrorPage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+			<section id="banner">
+
+<h3>@Model.Value("errorTitle")</h3>
+
+</section>
