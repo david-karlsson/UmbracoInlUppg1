@@ -31,7 +31,7 @@
                                           @Html.TextBoxFor(m => registerModel.Username)
                                           @Html.ValidationMessageFor(m => registerModel.Username)
     *@
-
+    registerModel.UsernameIsEmail = false;
     Html.EnableClientValidation();
     Html.EnableUnobtrusiveJavaScript();
     Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js");
@@ -49,7 +49,6 @@
 
 
 
-
     @* This message will show if registerModel.RedirectUrl is not defined (default) *@
     <p>Registration succeeded.</p>
 }
@@ -59,9 +58,18 @@ else
     {
         <fieldset>
             <legend>Register Member</legend>
-
+            
+            
+         
+           
             @Html.ValidationSummary("registerModel", true)
-
+          
+            
+           
+            @Html.LabelFor(m => registerModel.Username)
+            @Html.TextBoxFor(m => registerModel.Username)
+            @Html.ValidationMessageFor(m => registerModel.Username)
+            
             @Html.LabelFor(m => registerModel.Name)
             @Html.TextBoxFor(m => registerModel.Name)
             @Html.ValidationMessageFor(m => registerModel.Name)
@@ -101,6 +109,7 @@ else
             @Html.HiddenFor(m => registerModel.MemberTypeAlias)
             @Html.HiddenFor(m => registerModel.RedirectUrl)
             @Html.HiddenFor(m => registerModel.UsernameIsEmail)
+
 
             <button>Register</button>
         </fieldset>

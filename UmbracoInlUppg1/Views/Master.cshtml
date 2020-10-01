@@ -66,6 +66,39 @@ var selection = Umbraco.ContentAtRoot().FirstOrDefault()
                         }
                             <hr/>
                             
+                        
+                                
+                                
+@if (Umbraco.MemberIsLoggedOn())
+
+{
+
+    using (Html.BeginUmbracoForm("SubmitLogout", "Member", FormMethod.Post, new { id = "logout" }))
+
+    {
+
+        Html.AntiForgeryToken();
+
+        var myUser = Membership.GetUser();
+
+        if (myUser != null)
+
+        {
+
+    @:<li><p><strong>Logged in as</strong> <span>@myUser.UserName</span></p>
+
+
+@:<button name="login" type="submit"><span>logout</span> <i class="fa fa-arrow-right"></i></button></li>
+
+
+}
+
+}
+
+}
+
+                            
+                            
                             <h3>Language</h3>
                            <li><a  href="/">English</a> </li> 
                          <li>	<a href="/sv">Swedish</a></li> 
