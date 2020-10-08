@@ -63,3 +63,7 @@ Could not find any UmbracoForms licensing files in C:\Users\David\source\repos\U
 Could not find any UmbracoForms licensing files in C:\Users\David\source\repos\UmbracoInlUppg1\UmbracoInlUppg1\bin:
 Could not find any UmbracoForms licensing files in C:\Users\David\source\repos\UmbracoInlUppg1\UmbracoInlUppg1\bin:
 Could not find any UmbracoForms licensing files in C:\Users\David\source\repos\UmbracoInlUppg1\UmbracoInlUppg1\bin:
+Could not find any UmbracoForms licensing files in C:\Users\David\source\repos\UmbracoInlUppg1\UmbracoInlUppg1\bin:
+Could not find any UmbracoForms licensing files in C:\Users\David\source\repos\UmbracoInlUppg1\UmbracoInlUppg1\bin:
+Could not find any UmbracoForms licensing files in C:\Users\David\source\repos\UmbracoInlUppg1\UmbracoInlUppg1\bin:
+Could not find any UmbracoForms licensing files in C:\Users\David\source\repos\UmbracoInlUppg1\UmbracoInlUppg1\bin:

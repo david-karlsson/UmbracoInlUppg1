@@ -48,7 +48,10 @@ var selection = Umbraco.ContentAtRoot().FirstOrDefault()
 		<!-- Header -->
 			<header id="header" class="alt">
 				<h1><a href="/">Retrospect</a></h1>
+				
 				<a href="#nav">Menu</a>
+				
+
 			</header>
 
 		<!-- Nav -->
@@ -102,9 +105,18 @@ var selection = Umbraco.ContentAtRoot().FirstOrDefault()
                             <h3>Language</h3>
                            <li><a  href="/">English</a> </li> 
                          <li>	<a href="/sv">Swedish</a></li> 
+                         
+                         
+                         
+								
                     </ul>
                    
+                   
+                   <hr>
+                   @Html.Partial("Breadcrumb")	
+                   
 			</nav>
+	
 @RenderBody()
 		<!-- Footer -->
 			<footer id="footer">
