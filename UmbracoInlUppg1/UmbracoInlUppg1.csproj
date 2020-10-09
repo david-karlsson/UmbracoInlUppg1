@@ -360,6 +360,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Partials\_Login.cshtml" />
     <Content Include="Views\Partials\_Logout.cshtml" />
+    <Content Include="Views\Partials\_Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
